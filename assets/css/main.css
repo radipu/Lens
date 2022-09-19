@@ -80,7 +80,7 @@ body {
 		width: 30px;
 		height: 30px;
 		left: 50px;
-		top: 40px;
+		top: 50px;
 		background: #ed1f34;
 		position: absolute;
 		margin: -2.2em 0 0 -1.3em;
@@ -110,6 +110,7 @@ body {
 		position: absolute;
 		height: 2em;
 		width: 2em;
+		left: 3.2%;
 		border-radius: 50%;
 		-webkit-transform: translateX(-50%);
 		-o-transform: translateX(-50%);
