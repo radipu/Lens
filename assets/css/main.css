@@ -72,6 +72,98 @@ body {
 		overflow: hidden;
 	}
 
+	.marker {
+		transform: perspective(40px) rotateX(20deg) rotateZ(-45deg);
+		transform-origin: 50% 50%;
+		border-radius: 50% 50% 50% 0;
+		padding: 0 3px 3px 0;
+		width: 30px;
+		height: 30px;
+		left: 50px;
+		top: 40px;
+		background: #ed1f34;
+		position: absolute;
+		margin: -2.2em 0 0 -1.3em;
+		-webkit-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+		-moz-box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+		box-shadow: -1px 1px 4px rgba(0, 0, 0, .5);
+	  }
+	  
+	  .marker:after {
+		content: '';
+		width: .75em;
+		height: .75em;
+		bottom: 10px;
+		left: 3px;
+		margin: 1em 0 0 .4em;
+		background: #ffffff;
+		position: absolute;
+		border-radius: 50%;
+		-moz-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+		-webkit-box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+		box-shadow: 0 0 10px rgba(0, 0, 0, .5);
+		-moz-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+		-webkit-box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+		box-shadow: inset -2px 2px 4px hsla(0, 0, 0, .5);
+	  }
+	  .beacon {
+		position: absolute;
+		height: 2em;
+		width: 2em;
+		border-radius: 50%;
+		-webkit-transform: translateX(-50%);
+		-o-transform: translateX(-50%);
+		-moz-transform: translateX(-50%);
+		-ms-transform: translateX(-50%);
+		transform: translateX(-50%);
+		z-index: -1
+	  }
+	  
+	  .beacon:before,
+	  .beacon:after {
+		position: absolute;
+		content: "";
+		height: 3em;
+		width: 3em;
+		left: 0;
+		top: 0;
+		background-color: transparent;
+		border-radius: 50%;
+		box-shadow: 0 0 0 3px #ed1f34;
+		-webkit-animation: active 2s infinite linear;
+		-moz-animation: active 2s infinite linear;
+		animation: active 2s infinite linear;
+	  }
+	  
+	  .beacon:after {
+		-moz-animation-delay: 1s;
+		-webkit-animation-delay: 1s;
+		animation-delay: 1s;
+	  }
+	  
+	  @-webkit-keyframes active {
+		0% {
+		  -webkit-transform: scale(.1);
+		  opacity: 1;
+		}
+		100% {
+		  -webkit-transform: scale(2.5);
+		  opacity: 0;
+		}
+	  }
+	  
+	  @keyframes active {
+		0% {
+		  transform: scale(.1);
+		  transform: box-shadow(0px 0px 0px 1px #ed1f34);
+		  opacity: 1;
+		}
+		100% {
+		  transform: scale(2.5);
+		  opacity: 0;
+		}
+	  }
+
 /* Type */
 
 	html {
@@ -133,6 +225,7 @@ body {
 
 	p {
 		margin: 0 0 1.25em 0;
+		margin-left: 30px;
 	}
 
 	h1, h2, h3, h4, h5, h6 {
@@ -673,6 +766,7 @@ body {
 
 				#viewer .slide .caption h2, #viewer .slide .caption h3, #viewer .slide .caption h4, #viewer .slide .caption h5, #viewer .slide .caption h6 {
 					color: #fff;
+					margin-left: 30px;
 				}
 
 			#viewer .slide .image {
